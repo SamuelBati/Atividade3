@@ -1,0 +1,54 @@
+//primeira parte que é criar a classe objeto
+public class Produto {
+
+    //atributos
+    String NomeProduto;
+    float PrecoProduto;
+    int QuantidadeAdicionarProduto;
+    int QuantidadePresenteNoEstoque;
+    int QuantidadePossivelNoEstoque;
+
+    //métodos
+    public void ExibirInformacoes() {
+
+      System.out.printf(%n"Nome do produto:%s", NomeProduto);
+      System.out.printf(%n"Preco do produto:%2f", PrecoProduto);
+      System.out.printf(%n"Quantidade do produto no estoque:%d", QuantidadeAdicionarProduto);
+      System.out.printf(%n"quantidade deste produto que ja esta no estoque:%d",QuantidadePresenteNoEstoque);
+      System.out.printf(%n"quantidade deste produto que o estoque consegue armazenar:%d", QuantidadePossivelNoEstoque);
+    
+    }
+
+}
+
+//segunda parte, classe principal
+package produto;
+import java.until.Scanner;
+
+public class principal{
+
+  public static void main(String[]args){
+      Scanner sc = new Scanner(System.in);
+
+      Produto produto1 = new Produto();
+
+      System.out.printf(%n"Digite o nome do produto a ser adicionado");
+        produto1.NomeProduto = sc.nextLine();
+      System.out.printf(%n"Digite o preco deste produto");
+        produto1.PrecoProduto = sc.nextFloat();
+      System.out.printf(%n"Agora a quantidade deste produto que o estoque pode comportar");
+        produto1.QuantidadePossivelNoEstoque = sc.nextInt();
+      System.out.printf(%n"Quantas unidades deste produto temos em estoque");
+        produto1.QuantidadeNoEstoque = sc.nextInt();
+      System.out.printf(%n"Por fim insira quantas unidades deste produto pretende adicionar ao estoque");
+        produto1.QuantidadeAdicionarProduto = sc.nextInt();
+
+      if ((QuantidadeAdicionarProduto + QuantidadeNoEstoque) > QuantidadePossivelNoEstoque){
+         System.out.printf("%nA quantidade a ser adicionada excede o volume possivel de se armazenar no estoque");
+       }
+      else(){
+         produto1.ExibirInformacoes();
+       }
+    }
+
+}
