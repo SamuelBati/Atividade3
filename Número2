@@ -1,0 +1,52 @@
+//primeira parte, criar classe funcionario
+
+public class Funcionario{
+
+   //atributos
+   String Nome;
+   Float Salario;
+   Float SalarioComAumento;
+
+   //métodos
+   public Float CalcularAumento(){
+     
+    if(Salario >=1, && Salario <=1000){
+      return SalarioComAumento = Salario + (Salario * (15/100));
+     }
+    else if(Salario >=1001, && Salario <=1500){
+      return SalarioComAumento = Salario + (Salario * (10/100));
+     }
+    else if(Salario >=1501, && Salario <=2000){
+      return SalarioComAumento = Salario + (Salario * (5/100));
+     }
+   }
+
+  public void ExibirInformacoes(){
+    System.out.printf(%f"O salario anterior de %s e %2f", Salario);
+    System.out.prinf(%n"E o seu salario novo e %2f", SalarioComAumento);
+  }
+
+}
+
+//segunda parte, classe principal
+
+package funcionario;
+import java.util.Scanner;
+
+  public class Principal(){
+
+    public static void main(){
+      Scanner sc = new Scanner (System.in);
+      Funcionario fun1 = new Funcionario();
+
+      System.out.printf(%n"Ola, digite o nome do funcionario");
+        fun1.Nome= sc.nextLine;
+      System.out.printf(%n"Agora digite o salario atual, entre 1 e 2000, do funcionario");
+        fun1.Salario= sc.nextInt;
+
+      fun1.CalcularAumento();
+      fun1.ExibirInformacoes();
+  }
+
+}
+  
