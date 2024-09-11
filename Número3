@@ -1,0 +1,63 @@
+// primaeira parte, classe triangulos
+
+public class Triangulo(){
+
+  float Lado1;
+  float Lado2;
+  float Lado3;
+  float P= (Lado1 + Lado2 + Lado3)/2;
+  float Area;
+
+  public float AreaDoTriangulo(){
+    return Area = Math.sqrt(p * (p-Lado1) * (p-Lado2) * (p-Lado3));
+  }
+
+  public void ExibirInformacoes(){
+    System.out.printf(%n"a area deste triangulo e: %2f",Area); 
+  }
+
+}
+
+//segunda parte, classe principal
+
+package funcionario;
+import java.util.Scanner
+
+public class Principal(){
+
+  public static void main(){
+
+    Scanner scanner = new Scanner(System.in);
+    Triangulo tri1 = new Triangulo();
+    
+    System.out.printf(%n"Por favor diga a madida do primeiro lado do primeiro triangulo");
+      tri1.Lado1= sc.nextFloat;
+    System.out.printf(%n"Agora a do segundo lado");
+      tri1.Lado2= sc.nextFloat;
+    System.out.printf(%n"Por fim o terceiro lado do triangulo");
+      tri1.Lado3= sc.nextFloat;
+
+    tri1.AreaTriangulo;
+
+    Triangulo tri2 = new Triangulo();
+    
+    System.out.printf(%n"Por favor diga a madida do primeiro lado do segundo triangulo");
+      tri2.Lado1= sc.nextFloat;
+    System.out.printf(%n"Agora a do segundo lado");
+      tri2.Lado2= sc.nextFloat;
+    System.out.printf(%n"Por fim o terceiro lado do triangulo");
+      tri2.Lado3= sc.nextFloat;
+
+    tri2.Areatriangulo;
+
+    if(tri1.Area > tri2.Area){
+      System.out.printf(%n"o triangulo de maior area e o triangulo 1 com uma area de :%2f", tri1.Area);
+     }
+    else if(tri2.Area > tri1.Area){
+      System.out.printf(%n"o triangulo de maior area e o triangulo 1 com uma area de :%2f", tri2.Area);
+     }
+
+  }
+  
+
+}
